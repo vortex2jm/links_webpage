@@ -5,7 +5,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGear } from "react-icons/fa6";
 import Image from "next/image";
-import { BsShare } from "react-icons/bs";
+import ShareModal from "./(components)/shareModal";
 
 export const metadata = {
   title: "João Clevelares - Links",
@@ -28,7 +28,6 @@ export const metadata = {
   },
 };
 
-
 export default function Home() {
   return (
     <div className="min-h-screen w-screen pt-10 pb-10 flex flex-col justify-center items-center">
@@ -39,10 +38,7 @@ export default function Home() {
 
       <div className="flex flex-col justify-center items-center mb-10 text-cente">
         <h2 className="font-sans font-bold text-2xl">João Clevelares</h2>
-        {/* <p>Fundador - CyVex</p>
-        <p>Co-fundador - Criamus</p>
-        <p>Engenheiro de Computação (9/10)</p>
-        <p>Analista de Redes e Infraestrutura</p> */}
+        <div className="w-15 h-0.5 bg-[var(--destak)] mx-auto mt-1 rounded-full" />
       </div>
 
       <div className="h-fit w-m flex flex-col justify-center items-stretch rounded-xl gap-6">
@@ -69,14 +65,16 @@ export default function Home() {
       
       </div>
 
-      <a 
+      {/* <a 
         className="flex flex-row justify-start p-2 rounded-full mt-10 transition transform hover:-translate-y-1.5"
         href="https://wa.me/?text=https://joaoclev.dev.br"
         target="_blank"
         rel="noopener noreferrer"
       >
         <BsShare size={30} className="text-pink-600"/>
-      </a>
+      </a> */}
+
+      <ShareModal />
     </div>
   );
 }
