@@ -1,103 +1,82 @@
+import LinkCard from "./(components)/linkCard";
+import { FaInstagram } from "react-icons/fa";
+import { BsGlobe } from "react-icons/bs";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaGear } from "react-icons/fa6";
 import Image from "next/image";
+import { BsShare } from "react-icons/bs";
+
+export const metadata = {
+  title: "João Clevelares - Links",
+  description: "",
+  openGraph: {
+    title: "João Clevelares - Links",
+    description: "Conecte-se com João",
+    url: "https://links.joaoclev.dev.br",
+    siteName: "João - Links",
+    images: [
+      {
+        url: "https://github.com/vortex2jm.png",
+        width: 500,
+        height: 500,
+        alt: "Profile photo",
+      },
+    ],
+    locale: "pt_BR",
+    type: "website",
+  },
+};
+
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen w-screen pt-10 pb-10 flex flex-col justify-center items-center">
+      
+      <div className="mb-10">
+        <Image src={"/profile.png"} alt="profile photo" width={150} height={150}></Image>
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      <div className="flex flex-col justify-center items-center mb-10 text-cente">
+        <h2 className="font-sans font-bold text-2xl">João Clevelares</h2>
+        {/* <p>Fundador - CyVex</p>
+        <p>Co-fundador - Criamus</p>
+        <p>Engenheiro de Computação (9/10)</p>
+        <p>Analista de Redes e Infraestrutura</p> */}
+      </div>
+
+      <div className="h-fit w-m flex flex-col justify-center items-stretch rounded-xl gap-6">
+        
+        <LinkCard title="Soluções de Software" link="https://cyvex.com.br">
+          <FaGear />
+        </LinkCard>        
+
+        <LinkCard title="Website" link="https://joaoclev.dev.br">
+          <BsGlobe />
+        </LinkCard>
+                
+        <LinkCard title="LinkedIn" link="https://instagram.com/joao_p_moura">
+          <FaLinkedin />
+        </LinkCard>        
+        
+        <LinkCard title="GitHub" link="https://github.com/vortex2jm">
+          <FaGithub />
+        </LinkCard>
+
+        <LinkCard title="Instagram" link="https://instagram.com/joao_p_moura">
+          <FaInstagram />
+        </LinkCard>
+      
+      </div>
+
+      <a 
+        className="flex flex-row justify-start p-2 rounded-full mt-10 transition transform hover:-translate-y-1.5"
+        href="https://wa.me/?text=https://joaoclev.dev.br"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <BsShare size={30} className="text-pink-600"/>
+      </a>
     </div>
   );
 }
