@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { BsWhatsapp, BsLinkedin, BsFacebook } from "react-icons/bs";
+import { BsWhatsapp } from "react-icons/bs";
 import { BsShare } from "react-icons/bs";
 import { MdContentCopy } from "react-icons/md";
 import { LuArrowDownFromLine } from "react-icons/lu";

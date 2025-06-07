@@ -9,7 +9,7 @@ import ShareModal from "./(components)/shareModal";
 
 export const metadata = {
   title: "João Clevelares - Links",
-  description: "",
+  description: "Conecte-se com João",
   openGraph: {
     title: "João Clevelares - Links",
     description: "Conecte-se com João",
@@ -31,9 +31,9 @@ export const metadata = {
 export default function Home() {
   return (
     <div className="min-h-screen w-screen pt-10 pb-10 flex flex-col justify-center items-center">
-      
+
       <div className="mb-10">
-        <Image src={"/profile.png"} alt="profile photo" width={150} height={150}></Image>
+        <Image src={"/profile.png"} alt="profile photo" width={150} height={150} priority></Image>
       </div>
 
       <div className="flex flex-col justify-center items-center mb-10 text-cente">
@@ -42,19 +42,18 @@ export default function Home() {
       </div>
 
       <div className="h-fit w-m flex flex-col justify-center items-stretch rounded-xl gap-6">
-        
         <LinkCard title="Soluções de Software" link="https://cyvex.com.br">
           <FaGear />
-        </LinkCard>        
+        </LinkCard>
 
         <LinkCard title="Website" link="https://joaoclev.dev.br">
           <BsGlobe />
         </LinkCard>
-                
+
         <LinkCard title="LinkedIn" link="https://instagram.com/joao_p_moura">
           <FaLinkedin />
-        </LinkCard>        
-        
+        </LinkCard>
+
         <LinkCard title="GitHub" link="https://github.com/vortex2jm">
           <FaGithub />
         </LinkCard>
@@ -62,17 +61,7 @@ export default function Home() {
         <LinkCard title="Instagram" link="https://instagram.com/joao_p_moura">
           <FaInstagram />
         </LinkCard>
-      
       </div>
-
-      {/* <a 
-        className="flex flex-row justify-start p-2 rounded-full mt-10 transition transform hover:-translate-y-1.5"
-        href="https://wa.me/?text=https://joaoclev.dev.br"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <BsShare size={30} className="text-pink-600"/>
-      </a> */}
 
       <ShareModal />
     </div>
