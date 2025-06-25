@@ -50,7 +50,7 @@ export default function Home() {
           <BsGlobe />
         </LinkCard>
 
-        <LinkCard title="LinkedIn" link="https://instagram.com/joao_p_moura">
+        <LinkCard title="LinkedIn" link="https://www.linkedin.com/in/joão-clevelares-287b04279">
           <FaLinkedin />
         </LinkCard>
 
